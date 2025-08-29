@@ -8659,14 +8659,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1058838689535987207, guid: e6b42f9cde31c5048809cf51ef8e1e35, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 957e0513ee6dfa443ba5ba0b352f9e36, type: 2}
-    - target: {fileID: 1124574039504945077, guid: e6b42f9cde31c5048809cf51ef8e1e35, type: 3}
-      propertyPath: m_GravityScale
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4649149757004874677, guid: e6b42f9cde31c5048809cf51ef8e1e35, type: 3}
       propertyPath: m_Name
       value: Bronzo (Player)
@@ -8710,14 +8702,6 @@ PrefabInstance:
     - target: {fileID: 6612803704115796327, guid: e6b42f9cde31c5048809cf51ef8e1e35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7668691366421535342, guid: e6b42f9cde31c5048809cf51ef8e1e35, type: 3}
-      propertyPath: jumpSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7668691366421535342, guid: e6b42f9cde31c5048809cf51ef8e1e35, type: 3}
-      propertyPath: moveSpeed
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
