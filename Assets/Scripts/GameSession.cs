@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
+    [SerializeField] int playerLives = 3;
+
     void Awake()
     {
-        // create our Singleton
         int numberGameSessions = FindObjectsByType<GameSession>(FindObjectsSortMode.None).Length;
         if (numberGameSessions > 1)
         {
@@ -16,9 +19,30 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    // when player dies, do certain things
-    // reduce number of lives
-    // if we have no lives left then restart the whole game
+    public void ProcessPlayerDeath()
+    {
+        if (playerLives > 1)
+        {
+            TakeLife();
+        }
+        else
+        {
+            ResetGameSession();
+        }
+    }
+
+    void TakeLife()
+    {
+        playerLives--;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    void ResetGameSession()
+    {
+        SceneManager.LoadScene(0);
+        Destroy(gameObject);
+    }
 
 
 
